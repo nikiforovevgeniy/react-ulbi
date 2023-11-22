@@ -3,15 +3,17 @@ import { classNames } from 'shared/helpers';
 import { useTheme } from 'shared/theme';
 import { AppRouter } from './providers/RouterProvider';
 import { Navbar } from 'widgets/Navbar';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 
 const App = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Navbar />
+      <Navbar>
+        <ThemeSwitcher />
+      </Navbar>
       <AppRouter />
-      <button onClick={toggleTheme}>toggle theme</button>
     </div>
   );
 };
