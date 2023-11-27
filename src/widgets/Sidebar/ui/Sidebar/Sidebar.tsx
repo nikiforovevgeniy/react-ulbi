@@ -1,6 +1,7 @@
 import cls from './Sidebar.module.scss';
 import { FC, useState } from 'react';
 import { classNames } from 'shared/helpers';
+import { LangSwitcher } from 'shared/i18n';
 import { ThemeSwitcher } from 'shared/theme';
 
 interface SidebarProps {
@@ -23,6 +24,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
       <button onClick={toggleCollapse}>toggle</button>
       <div className={cls.switchers}>
         <ThemeSwitcher />
+        <LangSwitcher />
       </div>
     </div>
   );
