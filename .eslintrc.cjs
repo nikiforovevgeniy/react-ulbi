@@ -3,7 +3,12 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['standard-with-typescript', 'plugin:react/recommended', 'prettier'],
+  extends: [
+    'standard-with-typescript',
+    'plugin:react/recommended',
+    'plugin:i18next/recommended',
+    'prettier',
+  ],
   overrides: [
     {
       env: {
@@ -20,7 +25,7 @@ module.exports = {
     sourceType: 'module',
   },
   ignorePatterns: ['.eslintrc.cjs'],
-  plugins: ['react'],
+  plugins: ['react', 'i18next'],
   rules: {
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
