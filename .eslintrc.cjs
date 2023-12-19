@@ -19,6 +19,12 @@ module.exports = {
         sourceType: 'script',
       },
     },
+    {
+      files: ['./**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
   ],
   parserOptions: {
     ecmaVersion: 'latest',
